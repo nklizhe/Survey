@@ -20,7 +20,7 @@
 - (void)setup
 {
     self.validationOptions  = @[SurveyValidationRequired];
-    self.errorMessages      = [SurveyDefaultErrorMessages mutableCopy];
+    self.errorMessages      = [NSMutableDictionary dictionaryWithDictionary:SurveyDefaultErrorMessages];
 }
 
 - (id)initWithFrame:(CGRect)frame
