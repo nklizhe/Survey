@@ -133,7 +133,9 @@
     _placeholderColor = _placeholderColor?:[UIColor colorWithWhite:0.7f alpha:1.0f];
     
     [_placeholderColor setFill];
-    [self.placeholder drawInRect:rect withFont:self.font];
+//    [self.placeholder drawInRect:rect withFont:self.font];
+    CGRect placeholderRect = CGRectMake(rect.origin.x, (rect.size.height- self.font.pointSize)/2, rect.size.width, self.font.pointSize);
+    [self.placeholder drawInRect:placeholderRect withFont:self.font lineBreakMode:NSLineBreakByClipping alignment:self.textAlignment];
 }
 
 @end
